@@ -21,11 +21,37 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/timeOfRun"
-        android:layout_width="227dp"
+        android:id="@+id/minsRun"
+        android:layout_width="100dp"
         android:layout_height="55dp"
-        android:layout_marginStart="94dp"
-        android:layout_marginLeft="94dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginBottom="516dp"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/colon"
+        android:layout_width="25dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="190dp"
+        android:layout_marginLeft="152dp"
+        android:layout_marginTop="120dp"
+        android:text=" : "
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/secondsRun"
+        android:layout_width="100dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginLeft="220dp"
         android:layout_marginBottom="516dp"
         android:ems="10"
         android:inputType="date"

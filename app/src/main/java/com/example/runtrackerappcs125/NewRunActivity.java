@@ -3,13 +3,10 @@ package com.example.runtrackerappcs125;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
-import android.widget.CalendarView;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -31,10 +28,14 @@ public class NewRunActivity extends AppCompatActivity {
         enter.setOnClickListener(unused -> {
 
             EditText date = (EditText) findViewById(R.id.dateEntered);
-            EditText timeRan = (EditText) findViewById(R.id.timeOfRun);
+            EditText minRan = (EditText) findViewById(R.id.minsRun);
+            EditText secondsRan = (EditText) findViewById(R.id.secondsRun);
+
             //ConstraintLayout calender = findViewById(R.id.calenderGroup);
             String storeDate = date.getText().toString();
-            String storeRun = timeRan.getText().toString();
+            String storeMinRun = minRan.getText().toString();
+            String storeSecondRun = secondsRan.getText().toString();
+            String storeRun = new String (storeMinRun + " : " + storeSecondRun);
             storeRuns.put(storeDate, storeRun);
             System.out.println("Map in new run " + storeRuns.keySet() + " " + storeRuns.entrySet());
             //System.out.println("You entered " + storeDate + " " + storeRun);
