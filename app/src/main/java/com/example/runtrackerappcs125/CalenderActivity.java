@@ -1,5 +1,6 @@
 package com.example.runtrackerappcs125;
 
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -16,6 +17,9 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Date;
+import com.prolificinteractive.materialcalendarview.CalendarDay;
+import com.prolificinteractive.materialcalendarview.DayViewFacade;
+
 
 public class CalenderActivity extends AppCompatActivity {
     //private NewRunActivity runActivity = new NewRunActivity();
@@ -51,6 +55,12 @@ public class CalenderActivity extends AppCompatActivity {
                 System.out.println("date to display: " + dateToDisplay);
                 System.out.println("Map in calender " + NewRunActivity.storeRuns.keySet() + " " +
                         NewRunActivity.storeRuns.entrySet());
+                int setYear = year;
+                int setMonth = month + 1;
+                int setDay = day;
+                CalendarDay.from(year, month + 1, day);
+
+
                 for (Map.Entry<String, String> entry : NewRunActivity.storeRuns.entrySet()) {
                     System.out.println("Before if statement");
 
@@ -72,6 +82,13 @@ public class CalenderActivity extends AppCompatActivity {
             }
         });
     }
+    /**
+    public boolean shouldDecorate(CalendarDay day) {
+        return false;
+    }
+    public void decorate(DayViewFacade view) {
+        return;
+    } */
 
     public void updateColor() {
 
